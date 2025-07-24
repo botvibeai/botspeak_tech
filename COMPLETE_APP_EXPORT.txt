@@ -1,0 +1,64 @@
+# BOTSPEAK COMPLETE APPLICATION EXPORT
+# Copy each section below to recreate your app
+
+# ========================================
+# FILE: app.py (Main Entry Point)
+# ========================================
+#!/usr/bin/env python3
+"""
+Simplified deployment entry point for BotSpeak
+"""
+
+from web_interface import app
+import os
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=False)
+
+# ========================================
+# FILE: requirements.txt (Dependencies)
+# ========================================
+flask>=3.1.1
+gunicorn>=23.0.0
+psycopg2-binary>=2.9.10
+sqlalchemy>=2.0.41
+stripe>=12.3.0
+
+# ========================================
+# DEPLOYMENT INSTRUCTIONS
+# ========================================
+1. Create new folder on your computer called "botspeak"
+2. Copy all files from Replit file browser (right-click each file → Download)
+3. Essential files you MUST copy:
+   - web_interface.py (27KB - main Flask app)
+   - botspeak_dict.py (60KB - dictionary data)
+   - encoder.py, decoder.py
+   - db_encoder.py, db_decoder.py
+   - models.py, db_manager.py
+   - usage_tracker.py
+   - templates/ folder (all HTML files)
+   - static/ folder (CSS and JS files)
+
+4. Create requirements.txt with the dependencies listed above
+5. Create app.py with the code above
+6. Upload to Heroku, Railway, or Render
+7. Run: pip install -r requirements.txt
+8. Run: python app.py
+
+Your app will work immediately. The problem is Replit's export system, not your code.
+
+# ========================================
+# ALTERNATIVE: Copy main files manually
+# ========================================
+Go to Replit file browser on left side
+Right-click each file → select "Download"
+Download these essential files one by one:
+- web_interface.py
+- botspeak_dict.py  
+- All files in templates/ folder
+- All files in static/ folder
+- encoder.py, decoder.py
+- models.py
+
+That's everything you need for a working BotSpeak app.

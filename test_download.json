@@ -1,0 +1,13 @@
+[
+  {
+    "firstName": "Test",
+    "lastName": "User",
+    "email": "test@example.com",
+    "category": "technical",
+    "subject": "Test Support Request",
+    "message": "This is a test message",
+    "id": "73133e64",
+    "status": "new",
+    "submitted_at": "2025-07-22T19:44:28.938558"
+  }
+]
